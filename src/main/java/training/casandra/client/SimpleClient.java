@@ -29,9 +29,9 @@ public class SimpleClient {
         cluster.close();
     }
 
-    public static void main(String[] args) {
-        SimpleClient client = new SimpleClient();
-        client.connect("127.0.0.1");
-        client.close();
+    public Cluster getCluster()
+    {
+        return cluster;
     }
+
 }
