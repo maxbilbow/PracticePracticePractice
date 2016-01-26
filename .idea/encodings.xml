@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/CamelTest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/CamelTest/camel-example-spring-boot" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Cassandra" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

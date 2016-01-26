@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="camel-example-spring-boot:war">
+    <output-path>$PROJECT_DIR$/CamelTest/camel-example-spring-boot/target</output-path>
+    <root id="archive" name="camel-example-spring-boot.war">
+      <element id="artifact" artifact-name="camel-example-spring-boot:war exploded" />
+    </root>
+  </artifact>
+</component>

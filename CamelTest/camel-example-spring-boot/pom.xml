@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one or more
+	contributor license agreements. See the NOTICE file distributed with
+	this work for additional information regarding copyright ownership.
+	The ASF licenses this file to You under the Apache License, Version
+	2.0 (the "License"); you may not use this file except in compliance
+	with the License. You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+	applicable law or agreed to in writing, software distributed under the
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+	CONDITIONS OF ANY KIND, either express or implied. See the License for
+	the specific language governing permissions and limitations under the
+	License.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <artifactId>camel-example-spring-boot</artifactId>
+  <packaging>jar</packaging>
+  <name>Camel :: Example :: Spring Boot</name>
+  <description>An example showing how to work with Camel and Spring Boot</description>
+
+    <parent>
+        <!--<groupId>org.apache.camel</groupId>-->
+        <!--<artifactId>camel-commands-spring-boot</artifactId>-->
+        <!--<version>2.16.1</version>-->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.2.RELEASE</version>
+    </parent>
+
+
+    <properties>
+    <spring.boot-version>1.3.2.RELEASE</spring.boot-version>
+    <maven-war-plugin-version>2.6</maven-war-plugin-version>
+      <camel-version>2.16.1</camel-version>
+  </properties>
+
+  <!--<dependencyManagement>-->
+    <!--<dependencies>-->
+      <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-dependencies</artifactId>-->
+        <!--<version>${spring.boot-version}</version>-->
+        <!--<type>pom</type>-->
+        <!--<scope>import</scope>-->
+      <!--</dependency>-->
+    <!--</dependencies>-->
+  <!--</dependencyManagement>-->
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-spring</artifactId>
+        <version>${camel-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+
+      <!-- C A M E L D E P E N D E N C I E S -->
+
+      <!--<dependency>-->
+          <!--<groupId>org.springframework.boot</groupId>-->
+          <!--<artifactId>camel-example-spring-boot</artifactId>-->
+          <!--<version>1.3.1.RELEASE</version>-->
+      <!--</dependency>-->
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-core</artifactId>
+          <version>${camel-version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-spring</artifactId>
+          <version>${camel-version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-quartz2</artifactId>
+          <version>${camel-version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-disruptor</artifactId>
+          <version>${camel-version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-rabbitmq</artifactId>
+          <version>${camel-version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-metrics</artifactId>
+          <version>${camel-version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+          <version>2.2.2</version>
+      </dependency>
+
+
+      <!-- E S S E N T I A L S -->
+      <dependency>
+          <groupId>joda-time</groupId>
+          <artifactId>joda-time</artifactId>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-configuration-processor</artifactId>
+          <optional>true</optional>
+      </dependency>
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>spring-orm</artifactId>
+          <version>${spring.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.camel</groupId>
+          <artifactId>camel-test</artifactId>
+          <version>${camel-version}</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-autoconfigure</artifactId>
+      </dependency>
+    <!-- operations -->
+    <!--<dependency>-->
+      <!--<groupId>org.jolokia</groupId>-->
+      <!--<artifactId>jolokia-core</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+    <!--</dependency>-->
+
+    <!-- remote shell -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-remote-shell</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.camel</groupId>
+      <artifactId>camel-spring-boot</artifactId>
+        <version>${camel-version}</version>
+    </dependency>
+
+    <!-- testing -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+    <!-- Comment out the snapshot repositories as we don't need them now -->
+    <repositories>
+        <repository>
+            <id>apache.snapshots</id>
+            <url>http://repository.apache.org/snapshots/</url>
+            <name>Apache Snapshot Repo</name>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assemble-zip.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- append to the packaging phase. -->
+                        <goals>
+                            <goal>single</goal> <!-- goals == mojos -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

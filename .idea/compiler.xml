@@ -37,8 +37,16 @@
         <processorPath useClasspath="true" />
         <module name="CamelTest" />
       </profile>
+      <profile default="false" name="Annotation profile for camel-example-spring-boot" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="camel-example-spring-boot" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="camel-example-spring-boot" target="1.6" />
       <module name="CamelTest" target="1.8" />
       <module name="casandra-training" target="1.8" />
       <module name="CasandraTest" target="1.8" />

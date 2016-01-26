@@ -3,12 +3,17 @@
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/CamelTest/camel-example-spring-boot" />
+    <file type="web" url="file://$PROJECT_DIR$/CamelTest/camel-examples/camel-example-spring-boot" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/Cassandra/pom.xml" />
         <option value="$PROJECT_DIR$/CamelTest/pom.xml" />
+        <option value="$PROJECT_DIR$/CamelTest/camel-example-spring-boot/pom.xml" />
       </list>
     </option>
   </component>

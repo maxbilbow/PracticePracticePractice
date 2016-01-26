@@ -1,5 +1,6 @@
 package training.camel.routers;
 
+import org.springframework.stereotype.Component;
 import training.camel.processors.SugarProcessor;
 import training.camel.stuff.ApplicationTransactionBegin;
 import training.camel.stuff.ApplicationTransactionCommit;
@@ -11,6 +12,7 @@ import javax.annotation.Resource;
 /**
  * Created by bilbowm (Max Bilbow) on 26/01/2016.
  */
+@Component
 public class CamelRouter extends AbstractPath
 {
 
@@ -24,7 +26,7 @@ public class CamelRouter extends AbstractPath
   public void configure() throws Exception
   {
     initBeans();
-    from("SomePlace").routeId("SomeRouteId")
+    from(RouteConstants.JOB_IN_PRE_PROCESSING_CHANNEL).routeId(RouteConstants.JOB_IN_PRE_PROCESSING_ROUTE_ID)
             .errorHandler(getFrameworkPreProcessingError())
             .bean(ApplicationTransactionBegin.class)
              .choice()
