@@ -25,7 +25,8 @@ public class SimpleClientTest {
         client.createSchema();
         client.loadData();
         client.querySchema();
-        client.dropSchema();
+//        client.getCluster().getConfiguration().getPolicies().
+//        client.dropSchema();
         client.close();
     }
 

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CasandraTest.iml" filepath="$PROJECT_DIR$/CasandraTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CamelTest/CamelTest.iml" filepath="$PROJECT_DIR$/CamelTest/CamelTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cassandra/casandra-training.iml" filepath="$PROJECT_DIR$/Cassandra/casandra-training.iml" />
     </modules>
   </component>
 </project>

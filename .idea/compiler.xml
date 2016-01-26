@@ -22,10 +22,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="CasandraTest" />
+      </profile>
+      <profile default="false" name="Annotation profile for casandra-training" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="casandra-training" />
+      </profile>
+      <profile default="false" name="Annotation profile for CamelTest" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="CamelTest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CamelTest" target="1.8" />
+      <module name="casandra-training" target="1.8" />
       <module name="CasandraTest" target="1.8" />
     </bytecodeTargetLevel>
   </component>
